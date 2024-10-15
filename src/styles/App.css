@@ -1,0 +1,154 @@
+/* src/App.css */
+
+.App-header {
+  background-color: #ffffff;  /* Fondo del encabezado */
+  min-height: 50vh;          /* Altura mínima del encabezado */
+  display: flex;               /* Usar flexbox para centrar el contenido */
+  flex-direction: column;      /* Colocar elementos en columna */
+  align-items: center;         /* Centrar elementos horizontalmente */
+  justify-content: center;     /* Centrar elementos verticalmente */
+  font-size: calc(10px + 2vmin); /* Tamaño de fuente responsivo */
+  color: rgb(0, 0, 0);         /* Color de texto */
+}
+
+/* Estilo común para cuadros de entrada (textarea y input) */
+.input-box {
+  border: 2px solid #ccc;  /* Borde ligero */
+  border-radius: 10px;     /* Esquinas redondeadas */
+  padding: 10px;           /* Espaciado interno */
+  width: 300px;            /* Ancho */
+  margin-bottom: 10px;     /* Margen inferior */
+  font-size: 1rem;         /* Tamaño de fuente */
+}
+
+/* Estilo específico para el textarea */
+textarea {
+  height: 100px;           /* Altura del cuadro */
+}
+
+/* Estilo para el placeholder */
+textarea::placeholder,
+input[type="text"]::placeholder {
+  color: #aaa;                  /* Color del placeholder */
+  font-style: italic;           /* Estilo de texto en cursiva */
+}
+
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;  /* Borde ligero */
+  border-radius: 20px;     /* Esquinas redondeadas */
+  padding: 0.5px 15px;      /* Aumentar el padding para mayor altura */
+  margin-bottom: 30px;     /* Margen inferior */
+  width: 400px;            /* Ajusta el ancho aquí si lo necesitas */
+}
+
+.search-bar input {
+  border: none;            /* Sin borde en el input */
+  outline: none;          /* Sin contorno */
+  flex: 1;                /* Toma todo el espacio disponible */
+  padding: 10px;          /* Espaciado interno */
+  border-radius: 20px;    /* Esquinas redondeadas */
+  font-size: 1rem;        /* Tamaño de fuente */
+  height: 40px;           /* Establecer una altura específica para el input */
+}
+
+.search-icon {
+  background: transparent; /* Fondo transparente para el icono */
+  border: none;            /* Sin borde */
+  cursor: pointer;         /* Cambiar cursor al pasar el mouse */
+  margin-left: 5px;       /* Espacio entre input y icono */
+}
+.search-icon:hover {
+  background: transparent; /* Asegúrate de que se mantenga transparente */
+}
+
+button {
+  background-color: #884821;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #955b37;
+  ;
+}
+
+/* Estilo del contenedor principal */
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+  border: 3px solid #d9d9d9;
+}
+
+/* Estilo de las notas estilo "post-it" */
+.note {
+  background-color: #fff6ba;  /* Color amarillo claro de Post-it */
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Le da un toque de escritura a mano */
+}
+
+.note:hover {
+  transform: scale(1.05);
+}
+
+/* Ícono de eliminar estilo basurero en la esquina inferior derecha */
+.note .delete-icon {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 5px;   /* Cambia la posición a la parte inferior */
+  right: 0px;    /* Alinea el ícono a la derecha */
+  cursor: pointer;
+}
+
+.note .delete-icon img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+.note .delete-icon img:hover {
+  opacity: 1;
+}
+
+/* Ícono de editar estilo */
+.note .edit-icon {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 9px;  /* Ajustar posición según necesites */
+  left: 0px;   /* Mantener a la derecha */
+  cursor: pointer;
+  font-size: 1.2rem; /* Cambiar el tamaño del ícono de editar */
+  color: #585858 ; /* Color del ícono de editar */
+}
+
+.note .edit-icon:hover {
+  color: #3c3c3c; /* Color al pasar el mouse */
+}
